@@ -1,0 +1,17 @@
+package com.studentdata;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class Studentdata1ApplicationTests {
+
+	@Test
+	void saveOneStudent() {
+		Student s1=new Student();
+		s1.setName("mishraji");
+		s1.setCourse("devl");
+		s1.sefee(10000);
+	}
+
+}

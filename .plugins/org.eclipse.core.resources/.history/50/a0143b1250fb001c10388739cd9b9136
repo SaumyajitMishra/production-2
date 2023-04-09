@@ -1,0 +1,4 @@
+spring.datasource.url=jdbc:mysql://localhost:3306/registrationData
+spring.datasource.username=root
+spring.datasource.password=Saumyajit97.
+logging.level.org.springframework.boot.autoconfigure

@@ -1,0 +1,5 @@
+package com.traxcrm.entities;
+
+public class Contact {
+
+}

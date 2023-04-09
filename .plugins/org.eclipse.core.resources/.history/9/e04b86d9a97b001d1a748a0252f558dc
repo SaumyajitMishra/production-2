@@ -1,0 +1,5 @@
+package com.raxcrm.Services;
+
+public interface LeadService {
+
+}

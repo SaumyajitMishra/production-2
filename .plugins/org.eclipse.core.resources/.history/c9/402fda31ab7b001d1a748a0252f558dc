@@ -1,0 +1,28 @@
+package com.raxcrm.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.raxcrm.Services.LeadService;
+import com.raxcrm.entity.Lead;
+
+@Controller
+public class LeadController {
+	@Autowired
+	private LeadService leadService;
+		
+
+  @RequestMapping("/viewleadpage")
+	public String viewLeadPage() {
+	return("view_lead_page");
+}
+    public String saveOneLead(@ModelAttribute("Lead")Lead lead, ModelMap model) {
+    	
+    	leadService.saveLead(lead);
+    	model.addAttribute("Lead",lead);
+   return "lead_info";
+    }
+}

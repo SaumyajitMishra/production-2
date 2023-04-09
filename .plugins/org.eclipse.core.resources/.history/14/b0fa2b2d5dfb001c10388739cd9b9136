@@ -1,0 +1,49 @@
+package com.studentdata;
+
+import java.util.Optional;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.studentdata.entity.Student;
+import com.studentdata.repository.StudentRepository;
+
+@SpringBootTest
+class Studentdata1ApplicationTests {
+	@Autowired
+private StudentRepository studentRepo;
+	@Test
+	void saveOneStudent() {
+		Student s1=new Student();
+		s1.setName("excelr");
+		s1.setCourse("data science");
+		s1.setFee(5000);
+	studentRepo.save (s1);
+	}
+	@Test
+	void deleteOneStudent() {
+		studentRepo.deleteById(2L);
+	}
+	@Test
+	void getOneStudent() {
+		Optional<Student> findById = studentRepo.findById(1L);
+		Student s = findById.get();
+		System.out.println(s.getId());
+		System.out.println(s.getName());
+		System.out.println(s.getCourse());
+		System.out.println(s.getFee());
+	}
+
+	@Test
+	void getUpdateStudent() {
+		Optional<Student> findById = studentRepo.findById(1L);
+		Student s = findById.get();
+		s.setCourse("banking");
+		s.setFee(5000);
+		
+        studentRepo.save(s);
+	
+	}
+
+}

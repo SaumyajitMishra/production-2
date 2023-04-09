@@ -1,0 +1,21 @@
+package com.studentdb;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class Studentdb1ApplicationTests {
+
+	@Test
+	void saveOneStudent() {
+		Student s1=new Student();
+		s1.setName("mike");
+		s1.setCourse("dev");
+		s1.setFee("10000");
+	
+		
+		
+		
+	}
+
+}

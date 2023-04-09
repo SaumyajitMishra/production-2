@@ -1,0 +1,13 @@
+package com.raxcrm.Services;
+
+import com.raxcrm.entity.Lead;
+
+public class LeadServiceimpl implements LeadService {
+
+	@Override
+	public void saveLead(Lead lead) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

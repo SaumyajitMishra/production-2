@@ -1,0 +1,23 @@
+package com.studentdb;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.studentdb1.entity.Student;
+import com.studentdb1.repository.StudentRepository;
+
+@SpringBootTest
+class Studentdb1ApplicationTests {
+	
+	@Test
+	void saveOneStudent() {
+		Student s1= new Student();
+	    s1.setName("mike");
+	    s1.setCourse("dev");
+	     s1.setFee("1000");
+		
+		
+	}
+
+}

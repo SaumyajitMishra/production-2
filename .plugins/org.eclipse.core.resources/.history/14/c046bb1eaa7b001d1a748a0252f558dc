@@ -1,0 +1,9 @@
+package com.raxcrm.Services;
+
+import com.raxcrm.entity.Lead;
+
+public interface LeadService {
+public void saveLead(Lead lead) {
+	
+}
+}

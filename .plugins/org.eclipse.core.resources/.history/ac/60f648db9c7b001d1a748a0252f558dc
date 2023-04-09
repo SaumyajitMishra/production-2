@@ -1,0 +1,5 @@
+package com.raxcrm.entity;
+
+public class Lead {
+
+}
